@@ -16,5 +16,10 @@ class StatisticsServiceTest {
     long actual = service.findMax(incomesInBillions);
 
     assertEquals(expected, actual);
+
+    long current_max = incomesInBillions[0];
+    for (long income : incomesInBillions)
+      if (current_max <= income)
+        current_max = income;
+    }
   }
-}
